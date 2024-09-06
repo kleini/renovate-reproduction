@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "branchPrefix": "renovate-",
+  "extends": [
+    "config:recommended"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "configMigration": true,
+  "packageRules": [
+    {
+      "dependencyDashboardApproval": true,
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["Temurin.kt"],
+      "matchStrings": [
+        "OpenJDK(?<major>[0-9]+)U-jdk_x64_linux_hotspot_(?<currentValue>[0-9a-z\\._]*)\\.tar\\.gz"
+      ],
+      "depNameTemplate": "adoptium/temurin{{{major}}}-binaries",
+      "datasourceTemplate": "github-release-attachments"
+    }
+  ]
+}
