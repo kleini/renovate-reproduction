@@ -1,4 +1,6 @@
-# minimal reproduction for my issue with github-release-attachments
+# 31249
+
+Reproduction for [Renovate discussion 31249](https://github.com/renovatebot/renovate/discussions/31249)
 
 I run locally in the directory of this cloned repository the following command
 
@@ -67,6 +69,7 @@ Everything like depName, currentValue, datasource, sourceUrl is detected correct
 
 Renovate notifies me about new adoptium/temurin8-binaries version 8u422b05.
 
-## Link to the Renovate issue or Discussion
+## Link to the Renovate iscussion
 
-[Link to discussion](https://github.com/renovatebot/renovate/discussions/31249)
+[Link to discussion 31249](https://github.com/renovatebot/renovate/discussions/31249)
+
