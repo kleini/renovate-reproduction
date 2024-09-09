@@ -1,21 +1,4 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "branchPrefix": "renovate-",
-  "extends": [
-    "config:recommended"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true
-  },
-  "configMigration": true,
-  "packageRules": [
-    {
-      "dependencyDashboardApproval": true,
-      "matchUpdateTypes": [
-        "major"
-      ]
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",
