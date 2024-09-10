@@ -17,8 +17,8 @@ Renovate seems to detect everything correctly but it does not look up the new ve
 
 Log output
 
-    DEBUG: Checking packageFiles for deprecated packages (repository=local)
-       "packageFiles": {
+    DEBUG: packageFiles with updates (repository=local)
+       "config": {
          "regex": [
            {
              "deps": [
@@ -26,31 +26,27 @@ Log output
                  "depName": "adoptium/temurin8-binaries",
                  "currentValue": "8u412b08",
                  "datasource": "github-release-attachments",
+                 "versioning": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+                 "extractVersion": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
                  "replaceString": "OpenJDK8U-jdk_x64_linux_hotspot_8u412b08.tar.gz",
                  "updates": [],
                  "packageName": "adoptium/temurin8-binaries",
-                 "versioning": "semver-coerced",
                  "warnings": [],
                  "sourceUrl": "https://github.com/adoptium/temurin8-binaries",
-                 "registryUrl": "https://github.com",
-                 "currentVersion": "8u412b08",
-                 "currentVersionTimestamp": "2024-09-02T20:03:27.000Z",
-                 "fixedVersion": "8u412b08"
+                 "registryUrl": "https://github.com"
                },
                {
                  "depName": "adoptium/temurin11-binaries",
                  "currentValue": "11.0.24_8",
                  "datasource": "github-release-attachments",
+                 "versioning": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+                 "extractVersion": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
                  "replaceString": "OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz",
                  "updates": [],
                  "packageName": "adoptium/temurin11-binaries",
-                 "versioning": "semver-coerced",
                  "warnings": [],
                  "sourceUrl": "https://github.com/adoptium/temurin11-binaries",
-                 "registryUrl": "https://github.com",
-                 "currentVersion": "11.0.24_8",
-                 "currentVersionTimestamp": "2024-07-17T21:00:29.000Z",
-                 "fixedVersion": "11.0.24_8"
+                 "registryUrl": "https://github.com"
                }
              ],
              "matchStrings": [
@@ -58,6 +54,8 @@ Log output
              ],
              "depNameTemplate": "adoptium/temurin{{{major}}}-binaries",
              "datasourceTemplate": "github-release-attachments",
+             "versioningTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+             "extractVersionTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
              "packageFile": "Temurin.kt"
            }
          ]
