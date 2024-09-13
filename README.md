@@ -26,8 +26,8 @@ Log output
                  "depName": "adoptium/temurin8-binaries",
                  "currentValue": "8u412b08",
                  "datasource": "github-release-attachments",
-                 "versioning": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
-                 "extractVersion": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+                 "versioning": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
+                 "extractVersion": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
                  "replaceString": "OpenJDK8U-jdk_x64_linux_hotspot_8u412b08.tar.gz",
                  "updates": [],
                  "packageName": "adoptium/temurin8-binaries",
@@ -39,8 +39,8 @@ Log output
                  "depName": "adoptium/temurin11-binaries",
                  "currentValue": "11.0.24_8",
                  "datasource": "github-release-attachments",
-                 "versioning": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
-                 "extractVersion": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+                 "versioning": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
+                 "extractVersion": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
                  "replaceString": "OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz",
                  "updates": [],
                  "packageName": "adoptium/temurin11-binaries",
@@ -54,14 +54,16 @@ Log output
              ],
              "depNameTemplate": "adoptium/temurin{{{major}}}-binaries",
              "datasourceTemplate": "github-release-attachments",
-             "versioningTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
-             "extractVersionTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
+             "versioningTemplate": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
+             "extractVersionTemplate": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
              "packageFile": "Temurin.kt"
            }
          ]
        }
 
 Everything like depName, currentValue, datasource, sourceUrl is detected correctly but no new versions are looked up.
+
+Regex validation on [regex101.com](https://regex101.com/r/anboia/1).
 
 ## Expected behavior
 

@@ -8,8 +8,8 @@
       ],
       "depNameTemplate": "adoptium/temurin{{{major}}}-binaries",
       "datasourceTemplate": "github-release-attachments",
-      "versioningTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$",
-      "extractVersionTemplate": "regex:^(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\._]+(?<build>\\d))?$"
+      "versioningTemplate": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$",
+      "extractVersionTemplate": "regex:^(?:jdk-?)?(?<major>\\d+)[u\\.](?<minor>\\d+)[-b\\.]+(?<patch>\\d+)(?:[\\.\\+_]+(?<build>\\d))?$"
     }
   ]
 }
